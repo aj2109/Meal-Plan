@@ -8,6 +8,6 @@
 protocol BaseViewModel {
     
     var model: BaseViewModel { get }
-    var viewController: BaseViewController { get set }
+    var viewController: BaseViewController { get }
     
 }
