@@ -5,8 +5,10 @@
 //  Created by Adam Jessop on 25/10/2020.
 //
 
-struct MealViewModel: Downloading {
+struct MealViewModel: BaseViewModel {
     
+    var model: BaseViewModel
+    var viewController: BaseViewController
     
     
 }

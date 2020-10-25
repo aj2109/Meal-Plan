@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+
+protocol Parsing: Downloading {
+    
+    
+}
+
+extension Parsing {
+    
+
+    
+}

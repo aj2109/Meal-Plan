@@ -5,8 +5,10 @@
 //  Created by Adam Jessop on 25/10/2020.
 //
 
-struct PreferencesViewModel {
+struct PreferencesViewModel: BaseViewModel {
     
-    
+    var model: BaseViewModel
+    var viewController: BaseViewController
+
     
 }

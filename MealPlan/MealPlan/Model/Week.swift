@@ -5,8 +5,12 @@
 //  Created by Adam Jessop on 25/10/2020.
 //
 
-struct Week {
+import Foundation
+
+struct Week: BaseModel {
     
-    
+    var days: [Day]
+    var nutrients: Nutrients
+    var date: Date
     
 }

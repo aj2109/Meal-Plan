@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0552F2642545B4B90062E418 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552F2632545B4B90062E418 /* BaseViewController.swift */; };
 		0552F2692545B53A0062E418 /* Animating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552F2682545B53A0062E418 /* Animating.swift */; };
+		0552F2882545C9720062E418 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552F2872545C9720062E418 /* BaseViewModel.swift */; };
+		0552F2902545CA2A0062E418 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552F28F2545CA2A0062E418 /* BaseModel.swift */; };
 		05561CF425459F39006B9B26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561CF325459F39006B9B26 /* AppDelegate.swift */; };
 		05561CF625459F39006B9B26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561CF525459F39006B9B26 /* SceneDelegate.swift */; };
 		05561CF825459F39006B9B26 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561CF725459F39006B9B26 /* HomeViewController.swift */; };
@@ -62,6 +64,8 @@
 /* Begin PBXFileReference section */
 		0552F2632545B4B90062E418 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0552F2682545B53A0062E418 /* Animating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animating.swift; sourceTree = "<group>"; };
+		0552F2872545C9720062E418 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		0552F28F2545CA2A0062E418 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		05561CF025459F39006B9B26 /* MealPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05561CF325459F39006B9B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05561CF525459F39006B9B26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,9 +187,9 @@
 			children = (
 				05561D462545A422006B9B26 /* Food.swift */,
 				05561D3E2545A415006B9B26 /* Meal.swift */,
-				05561D4B2545A42A006B9B26 /* User.swift */,
 				05561D502545A443006B9B26 /* Day.swift */,
 				05561D552545A449006B9B26 /* Week.swift */,
+				05561D4B2545A42A006B9B26 /* User.swift */,
 				05561D5A2545A4BA006B9B26 /* Preferences.swift */,
 			);
 			path = Model;
@@ -238,7 +242,7 @@
 		05561D8E2545A862006B9B26 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				05561DB32545AB3C006B9B26 /* New Group */,
+				05561DB32545AB3C006B9B26 /* Bases */,
 				05561DB22545AB33006B9B26 /* Capabilities */,
 			);
 			path = Protocols;
@@ -259,12 +263,14 @@
 			path = Capabilities;
 			sourceTree = "<group>";
 		};
-		05561DB32545AB3C006B9B26 /* New Group */ = {
+		05561DB32545AB3C006B9B26 /* Bases */ = {
 			isa = PBXGroup;
 			children = (
+				0552F28F2545CA2A0062E418 /* BaseModel.swift */,
+				0552F2872545C9720062E418 /* BaseViewModel.swift */,
 				0552F2632545B4B90062E418 /* BaseViewController.swift */,
 			);
-			path = "New Group";
+			path = Bases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +426,8 @@
 				05561D472545A422006B9B26 /* Food.swift in Sources */,
 				05561CF425459F39006B9B26 /* AppDelegate.swift in Sources */,
 				05561D682545A524006B9B26 /* UserViewModel.swift in Sources */,
+				0552F2882545C9720062E418 /* BaseViewModel.swift in Sources */,
+				0552F2902545CA2A0062E418 /* BaseModel.swift in Sources */,
 				05561DB82545AB9B006B9B26 /* Rotatable.swift in Sources */,
 				05561CF625459F39006B9B26 /* SceneDelegate.swift in Sources */,
 				05561D652545A524006B9B26 /* WeekViewModel.swift in Sources */,
@@ -604,6 +612,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8F6KZYT5C8;
 				INFOPLIST_FILE = MealPlan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -625,6 +634,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8F6KZYT5C8;
 				INFOPLIST_FILE = MealPlan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
