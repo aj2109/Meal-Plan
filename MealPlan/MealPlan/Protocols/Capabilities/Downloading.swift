@@ -23,6 +23,7 @@ extension Downloading {
         URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
             guard let data = data, error == nil else {
                 completion(nil, error)
+                return
             }
             if T.self == UIImage.self {
                 completion(UIImage(data: data) as? T, nil)

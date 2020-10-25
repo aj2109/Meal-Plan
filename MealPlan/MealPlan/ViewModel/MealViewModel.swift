@@ -9,8 +9,4 @@ struct MealViewModel: Downloading {
     
     
     
-    func a {
-        
-    }
-    
 }
