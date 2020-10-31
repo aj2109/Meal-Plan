@@ -7,8 +7,7 @@
 
 struct PreferencesViewModel: BaseViewModel {
     
-    var model: BaseViewModel
+    var model: BaseModel
     var viewController: BaseViewController
 
-    
 }

@@ -5,10 +5,9 @@
 //  Created by Adam Jessop on 25/10/2020.
 //
 
-struct UserViewModel: BaseViewModel {
+struct UserViewModel {
     
-    var model: BaseViewModel
-    var viewController: BaseViewController
+    var model: BaseModel
     
     
 }

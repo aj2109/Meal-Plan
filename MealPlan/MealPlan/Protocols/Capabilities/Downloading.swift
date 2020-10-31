@@ -9,7 +9,7 @@ import UIKit
 
 protocol Downloading {
     
-    func downloadContent<T>(url: URL, cachePolicy: NSURLRequest.CachePolicy, completion: @escaping (T?, Error?)->())
+    func downloadContent<T>(type: T, url: URL, cachePolicy: NSURLRequest.CachePolicy, completion: @escaping (T?, Error?)->())
 
 }
 
@@ -18,7 +18,7 @@ extension Downloading {
     
     //implement the protocols functions here - can make it return image, json, data etc
     
-    func downloadContent<T>(url: URL, cachePolicy: NSURLRequest.CachePolicy, completion: @escaping (T?, Error?)->()) {
+    func downloadContent<T>(type: T, url: URL, cachePolicy: NSURLRequest.CachePolicy, completion: @escaping (T?, Error?)->()) {
         let urlRequest = URLRequest(url: url, cachePolicy: cachePolicy)
         URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
             guard let data = data, error == nil else {
@@ -30,7 +30,7 @@ extension Downloading {
             } else if T.self == Data.self {
                 completion(data as? T, nil)
             }
-        })
+        }).resume()
     }
     
 }

@@ -5,4 +5,8 @@
 //  Created by Adam Jessop on 25/10/2020.
 //
 
-protocol BaseModel { }
+protocol BaseModel {
+    
+    
+    
+}

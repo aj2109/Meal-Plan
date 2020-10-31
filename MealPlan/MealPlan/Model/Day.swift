@@ -8,7 +8,20 @@
 struct Day: BaseModel {
     
     var meals: [Meal]
-    var nutrients: Nutrients
-    var dayName: String
+    var nutrients: Nutrients?
+    var dayName: DayName
+    
+}
+
+
+enum DayName: String {
+    
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+    case Saturday
+    case Sunday
     
 }

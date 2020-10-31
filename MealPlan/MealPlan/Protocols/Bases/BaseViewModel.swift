@@ -7,7 +7,6 @@
 
 protocol BaseViewModel {
     
-    var model: BaseViewModel { get }
-    var viewController: BaseViewController { get }
+    var model: BaseModel { get }
     
 }

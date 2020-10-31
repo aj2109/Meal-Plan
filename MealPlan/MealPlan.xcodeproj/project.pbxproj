@@ -30,9 +30,7 @@
 		05561D5B2545A4BA006B9B26 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D5A2545A4BA006B9B26 /* Preferences.swift */; };
 		05561D652545A524006B9B26 /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D5F2545A524006B9B26 /* WeekViewModel.swift */; };
 		05561D662545A524006B9B26 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D602545A524006B9B26 /* DayViewModel.swift */; };
-		05561D672545A524006B9B26 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D612545A524006B9B26 /* MealViewModel.swift */; };
 		05561D682545A524006B9B26 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D622545A524006B9B26 /* UserViewModel.swift */; };
-		05561D692545A524006B9B26 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D632545A524006B9B26 /* FoodViewModel.swift */; };
 		05561D6A2545A524006B9B26 /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D642545A524006B9B26 /* PreferencesViewModel.swift */; };
 		05561D6F2545A533006B9B26 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D6E2545A533006B9B26 /* HelperViewController.swift */; };
 		05561D7A2545A5DC006B9B26 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D792545A5DC006B9B26 /* MealViewController.swift */; };
@@ -45,6 +43,12 @@
 		05561DBD2545AC21006B9B26 /* Customisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561DBC2545AC21006B9B26 /* Customisable.swift */; };
 		05561DC72545ACE8006B9B26 /* Localisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561DC62545ACE8006B9B26 /* Localisable.swift */; };
 		05561DCC2545AD26006B9B26 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561DCB2545AD26006B9B26 /* Networking.swift */; };
+		05863B74254D538700942AD4 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05863B73254D538700942AD4 /* BaseCollectionViewCell.swift */; };
+		05863B7C254D56A600942AD4 /* HomeViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05863B7B254D56A600942AD4 /* HomeViewControllerViewModel.swift */; };
+		05863B84254D574700942AD4 /* DailyTeaserCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05863B83254D574700942AD4 /* DailyTeaserCollectionView.swift */; };
+		05863B89254D57A500942AD4 /* DailyTeaserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05863B88254D57A500942AD4 /* DailyTeaserViewModel.swift */; };
+		05863B8E254D57B500942AD4 /* DailyTeaserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05863B8D254D57B500942AD4 /* DailyTeaserCollectionViewCell.swift */; };
+		05863B93254D57BF00942AD4 /* DailyTeaserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05863B92254D57BF00942AD4 /* DailyTeaserCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,9 +98,7 @@
 		05561D5A2545A4BA006B9B26 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		05561D5F2545A524006B9B26 /* WeekViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
 		05561D602545A524006B9B26 /* DayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
-		05561D612545A524006B9B26 /* MealViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		05561D622545A524006B9B26 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		05561D632545A524006B9B26 /* FoodViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
 		05561D642545A524006B9B26 /* PreferencesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
 		05561D6E2545A533006B9B26 /* HelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
 		05561D792545A5DC006B9B26 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,12 @@
 		05561DBC2545AC21006B9B26 /* Customisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customisable.swift; sourceTree = "<group>"; };
 		05561DC62545ACE8006B9B26 /* Localisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localisable.swift; sourceTree = "<group>"; };
 		05561DCB2545AD26006B9B26 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		05863B73254D538700942AD4 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		05863B7B254D56A600942AD4 /* HomeViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerViewModel.swift; sourceTree = "<group>"; };
+		05863B83254D574700942AD4 /* DailyTeaserCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTeaserCollectionView.swift; sourceTree = "<group>"; };
+		05863B88254D57A500942AD4 /* DailyTeaserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTeaserViewModel.swift; sourceTree = "<group>"; };
+		05863B8D254D57B500942AD4 /* DailyTeaserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTeaserCollectionViewCell.swift; sourceTree = "<group>"; };
+		05863B92254D57BF00942AD4 /* DailyTeaserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTeaserCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,14 +212,13 @@
 		05561D2E2545A107006B9B26 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				05863B7A254D55F100942AD4 /* HomeViewController */,
 				05561D6E2545A533006B9B26 /* HelperViewController.swift */,
-				05561CF725459F39006B9B26 /* HomeViewController.swift */,
 				05561D792545A5DC006B9B26 /* MealViewController.swift */,
 				0552F2A42545F1870062E418 /* OnboardingViewController.swift */,
 				05561D7E2545A600006B9B26 /* PersonalisationViewController.swift */,
 				05561D892545A622006B9B26 /* PreferencesViewController.swift */,
 				0552F29C2545F1760062E418 /* TabBarViewController.swift */,
-				05561CF925459F39006B9B26 /* Main.storyboard */,
 				05561D0125459F3A006B9B26 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -220,11 +227,9 @@
 		05561D2F2545A111006B9B26 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				05561D632545A524006B9B26 /* FoodViewModel.swift */,
-				05561D612545A524006B9B26 /* MealViewModel.swift */,
-				05561D622545A524006B9B26 /* UserViewModel.swift */,
 				05561D602545A524006B9B26 /* DayViewModel.swift */,
 				05561D5F2545A524006B9B26 /* WeekViewModel.swift */,
+				05561D622545A524006B9B26 /* UserViewModel.swift */,
 				05561D642545A524006B9B26 /* PreferencesViewModel.swift */,
 			);
 			path = ViewModel;
@@ -278,8 +283,39 @@
 				0552F28F2545CA2A0062E418 /* BaseModel.swift */,
 				0552F2872545C9720062E418 /* BaseViewModel.swift */,
 				0552F2632545B4B90062E418 /* BaseViewController.swift */,
+				05863B73254D538700942AD4 /* BaseCollectionViewCell.swift */,
 			);
 			path = Bases;
+			sourceTree = "<group>";
+		};
+		05863B7A254D55F100942AD4 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05863BA8254D60BA00942AD4 /* View */,
+				05863BA7254D60B500942AD4 /* ViewModel */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		05863BA7254D60B500942AD4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				05863B7B254D56A600942AD4 /* HomeViewControllerViewModel.swift */,
+				05863B88254D57A500942AD4 /* DailyTeaserViewModel.swift */,
+				05863B92254D57BF00942AD4 /* DailyTeaserCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		05863BA8254D60BA00942AD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05561CF725459F39006B9B26 /* HomeViewController.swift */,
+				05561CF925459F39006B9B26 /* Main.storyboard */,
+				05863B83254D574700942AD4 /* DailyTeaserCollectionView.swift */,
+				05863B8D254D57B500942AD4 /* DailyTeaserCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05863B84254D574700942AD4 /* DailyTeaserCollectionView.swift in Sources */,
 				05561D662545A524006B9B26 /* DayViewModel.swift in Sources */,
 				05561D6A2545A524006B9B26 /* PreferencesViewModel.swift in Sources */,
 				05561DCC2545AD26006B9B26 /* Networking.swift in Sources */,
@@ -419,14 +456,14 @@
 				05561D562545A449006B9B26 /* Week.swift in Sources */,
 				0552F2642545B4B90062E418 /* BaseViewController.swift in Sources */,
 				05561D7F2545A600006B9B26 /* PersonalisationViewController.swift in Sources */,
+				05863B74254D538700942AD4 /* BaseCollectionViewCell.swift in Sources */,
 				05561D6F2545A533006B9B26 /* HelperViewController.swift in Sources */,
 				0552F29D2545F1760062E418 /* TabBarViewController.swift in Sources */,
 				05561D3F2545A415006B9B26 /* Meal.swift in Sources */,
 				0552F2982545E1630062E418 /* Constants.swift in Sources */,
 				05561CF825459F39006B9B26 /* HomeViewController.swift in Sources */,
+				05863B8E254D57B500942AD4 /* DailyTeaserCollectionViewCell.swift in Sources */,
 				05561DBD2545AC21006B9B26 /* Customisable.swift in Sources */,
-				05561D672545A524006B9B26 /* MealViewModel.swift in Sources */,
-				05561D692545A524006B9B26 /* FoodViewModel.swift in Sources */,
 				05561D4C2545A42A006B9B26 /* User.swift in Sources */,
 				05561D982545A9AC006B9B26 /* Parsing.swift in Sources */,
 				05561D902545A997006B9B26 /* Downloading.swift in Sources */,
@@ -434,6 +471,7 @@
 				05561DAE2545AB2C006B9B26 /* AnalyticsReporting.swift in Sources */,
 				0552F2692545B53A0062E418 /* Animating.swift in Sources */,
 				05561D8A2545A622006B9B26 /* PreferencesViewController.swift in Sources */,
+				05863B7C254D56A600942AD4 /* HomeViewControllerViewModel.swift in Sources */,
 				05561D472545A422006B9B26 /* Food.swift in Sources */,
 				05561CF425459F39006B9B26 /* AppDelegate.swift in Sources */,
 				05561D682545A524006B9B26 /* UserViewModel.swift in Sources */,
@@ -443,8 +481,10 @@
 				05561CF625459F39006B9B26 /* SceneDelegate.swift in Sources */,
 				05561D652545A524006B9B26 /* WeekViewModel.swift in Sources */,
 				05561D5B2545A4BA006B9B26 /* Preferences.swift in Sources */,
+				05863B93254D57BF00942AD4 /* DailyTeaserCellViewModel.swift in Sources */,
 				0552F2A52545F1870062E418 /* OnboardingViewController.swift in Sources */,
 				05561DC72545ACE8006B9B26 /* Localisable.swift in Sources */,
+				05863B89254D57A500942AD4 /* DailyTeaserViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
