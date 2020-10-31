@@ -33,7 +33,7 @@ class WeekViewModel: Downloading, Parsing {
     private func instantiateWeek() {
         //setupData must have been called prior to this point
         guard hasNotPassedAWeek else {
-            //SHOULD BE PULLING DATA FROM PERSISTENT STORAGE (Core Data?) if this is the case here.
+            //SHOULD BE PULLING DATA FROM PERSISTENT STORAGE (Core Data?) if this is the case here. prob do an offline check too
             return
         }
         guard let _ = self.mealsForEachDay else {
