@@ -17,48 +17,74 @@ class DailyTeaserCollectionViewCell: UICollectionViewCell {
         return iv
     }()
     
-    func setup(image: UIImage) {
+    lazy var dayLabel: UILabel = {
+        let label = UILabel()
+        self.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            label.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 25),
+            label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
+            label.widthAnchor.constraint(equalToConstant: self.frame.width / 2),
+            label.heightAnchor.constraint(equalToConstant: 100)
+        ])
+        label.font = UIFont.boldSystemFont(ofSize: 35)
+        label.textColor = .black
+        return label
+    }()
+    
+    lazy var nutrientsTextView: UITextView = {
+        let backgroundColorView = UIView()
+        self.addSubview(backgroundColorView)
+        backgroundColorView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backgroundColorView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            backgroundColorView.trailingAnchor.constraint(equalTo: self.imageview.trailingAnchor),
+            backgroundColorView.leadingAnchor.constraint(equalTo: dayLabel.trailingAnchor),
+            backgroundColorView.heightAnchor.constraint(equalToConstant: self.frame.height / 3)
+        ])
+        backgroundColorView.backgroundColor = .lightGray
+        backgroundColorView.alpha = 0.6
+        
+        let textView = UITextView()
+        self.addSubview(textView)
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            textView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            textView.trailingAnchor.constraint(equalTo: self.imageview.trailingAnchor),
+            textView.leadingAnchor.constraint(equalTo: dayLabel.trailingAnchor),
+            textView.heightAnchor.constraint(equalToConstant: self.frame.height / 3)
+        ])
+        textView.isScrollEnabled = false
+        textView.isEditable = false
+        textView.isSelectable = false
+        textView.showsVerticalScrollIndicator = false
+        textView.backgroundColor = .clear
+        return textView
+    }()
+    
+    func setup(image: UIImage, dayName: String, nutrients: Nutrients) {
         imageview.image = image
+        dayLabel.text = dayName
+        setupNutrients(nutrients: nutrients)
+    }
+    
+    private func setupNutrients(nutrients: Nutrients) {
+        let attributedText = NSMutableAttributedString()
+        attributedText.append(NSMutableAttributedString(string: "Calories: " + String(nutrients.calories), attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.white]))
+        attributedText.append(NSAttributedString(string: "\n"))
+        attributedText.append(NSMutableAttributedString(string: "Protein: " + String(nutrients.protein), attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.white]))
+        attributedText.append(NSAttributedString(string: "\n"))
+        attributedText.append(NSMutableAttributedString(string: "Carbs: " + String(nutrients.carbs), attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.white]))
+        attributedText.append(NSAttributedString(string: "\n"))
+        attributedText.append(NSMutableAttributedString(string: "Fat: " + String(nutrients.fat), attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.white]))
+        nutrientsTextView.attributedText = attributedText
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
         imageview.image = nil
+        dayLabel.text = nil
+        nutrientsTextView.attributedText = nil
     }
     
 }
-
-//
-////
-////  DailyTeaserCollectionViewCell.swift
-////  MealPlan
-////
-////  Created by Adam Jessop on 31/10/2020.
-////
-//
-//import UIKit
-//
-//class DailyTeaserCollectionViewCell: UICollectionViewCell {
-//
-//    lazy var imageview: UIImageView? = {
-//        let iv = UIImageView()
-//        self.addSubview(iv)
-////        iv.translatesAutoresizingMaskIntoConstraints = false
-////        NSLayoutConstraint.activate([
-////            iv.topAnchor.constraint(equalTo: self.topAnchor),
-////            iv.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-////            iv.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-////            iv.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-////        ])
-//        iv.frame = self.frame
-//        return iv
-//    }()
-//
-//    override func prepareForReuse() {
-//        super.prepareForReuse()
-//        imageview?.image = nil
-//        imageview = nil
-//        self.imageview?.removeFromSuperview()
-//    }
-//
-//}
