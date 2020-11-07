@@ -11,6 +11,8 @@ class DailyTeaserCollectionViewCell: UICollectionViewCell {
     
     lazy var imageview: UIImageView = {
         let iv = UIImageView()
+        iv.layer.cornerRadius = 15
+        iv.clipsToBounds = true
         self.addSubview(iv)
         iv.contentMode = .scaleAspectFill
         iv.frame.size = self.frame.size
@@ -34,6 +36,8 @@ class DailyTeaserCollectionViewCell: UICollectionViewCell {
     
     lazy var nutrientsTextView: UITextView = {
         let backgroundColorView = UIView()
+        backgroundColorView.layer.cornerRadius = 15
+        backgroundColorView.clipsToBounds = true
         self.addSubview(backgroundColorView)
         backgroundColorView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
