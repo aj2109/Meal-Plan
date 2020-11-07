@@ -9,25 +9,21 @@ import UIKit
 
 class DailyTeaserCollectionViewCell: UICollectionViewCell {
     
-    var imageview: UIImageView?
+    lazy var imageview: UIImageView = {
+        let iv = UIImageView()
+        self.addSubview(iv)
+        iv.contentMode = .scaleAspectFill
+        iv.frame.size = self.frame.size
+        return iv
+    }()
     
     func setup(image: UIImage) {
-        imageview = UIImageView()
-        guard let imageview = imageview else {
-            return
-        }
-        self.addSubview(imageview)
         imageview.image = image
-        imageview.frame = self.frame
-        print(imageview)
-        print(imageview.image)
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageview?.image = nil
-        self.imageview?.removeFromSuperview()
-        imageview = nil
+        imageview.image = nil
     }
     
 }

@@ -10,8 +10,8 @@ import UIKit
 class DailyTeaserCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout {
     
     var viewModel = DailyTeaserViewModel()
-    
-    var temporaryImageArray: [UIImage] = [#imageLiteral(resourceName: "Meal4"),#imageLiteral(resourceName: "Meal5"),#imageLiteral(resourceName: "Meal1"),#imageLiteral(resourceName: "Meal3"),#imageLiteral(resourceName: "Meal4"),#imageLiteral(resourceName: "Meal3"),#imageLiteral(resourceName: "Meal6"),#imageLiteral(resourceName: "Meal3")]
+        
+    var temporaryImageArray: [UIImage] = [#imageLiteral(resourceName: "unnamed"),#imageLiteral(resourceName: "Meal5"),#imageLiteral(resourceName: "Meal1"),#imageLiteral(resourceName: "Meal3"),#imageLiteral(resourceName: "Meal4"),#imageLiteral(resourceName: "Meal3"),#imageLiteral(resourceName: "Meal6"),#imageLiteral(resourceName: "Meal3")]
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: collectionView.frame.height)

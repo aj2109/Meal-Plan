@@ -12,7 +12,6 @@ class WeekViewModel: Downloading, Parsing {
     private var dayViewModels: [DayViewModel]!
     private var model: Week!
     private var mealsForEachDay: [DayName:[Meal]]!
-    
     private var hasNotPassedAWeek: Bool {
         return true //put in logic to check if its been a week since we last produced a meal plan
     }
