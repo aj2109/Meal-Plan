@@ -19,10 +19,10 @@ class HomeViewController: UIViewController, Downloading {
     }
     
     func autoScroll () {
-        let co = collectionView.contentOffset.x
-        let no = co + 0.2
+        let offset = collectionView.contentOffset.x
+        let newOffset = offset + 0.2
         UIView.animate(withDuration: 0.001, delay: 0, options: .curveEaseInOut, animations: { [weak self]() -> Void in
-            self?.collectionView.contentOffset = CGPoint(x: no, y: 0)
+            self?.collectionView.contentOffset = CGPoint(x: newOffset, y: 0)
             }) { [weak self](finished) -> Void in
                 self?.autoScroll()
         }

@@ -29,7 +29,7 @@ class DailyTeaserCollectionViewCell: UICollectionViewCell {
             label.widthAnchor.constraint(equalToConstant: self.frame.width / 2),
             label.heightAnchor.constraint(equalToConstant: 100)
         ])
-        label.font = UIFont.boldSystemFont(ofSize: 35)
+        label.font = UIFont.systemFont(ofSize: 35, weight: .medium)
         label.textColor = .black
         return label
     }()
@@ -44,7 +44,7 @@ class DailyTeaserCollectionViewCell: UICollectionViewCell {
             backgroundColorView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             backgroundColorView.trailingAnchor.constraint(equalTo: self.imageview.trailingAnchor),
             backgroundColorView.leadingAnchor.constraint(equalTo: dayLabel.trailingAnchor),
-            backgroundColorView.heightAnchor.constraint(equalToConstant: self.frame.height / 3)
+            backgroundColorView.heightAnchor.constraint(equalToConstant: self.frame.height / 2)
         ])
         backgroundColorView.backgroundColor = .lightGray
         backgroundColorView.alpha = 0.6
@@ -56,7 +56,7 @@ class DailyTeaserCollectionViewCell: UICollectionViewCell {
             textView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             textView.trailingAnchor.constraint(equalTo: self.imageview.trailingAnchor),
             textView.leadingAnchor.constraint(equalTo: dayLabel.trailingAnchor),
-            textView.heightAnchor.constraint(equalToConstant: self.frame.height / 3)
+            textView.heightAnchor.constraint(equalToConstant: self.frame.height / 2)
         ])
         textView.isScrollEnabled = false
         textView.isEditable = false
