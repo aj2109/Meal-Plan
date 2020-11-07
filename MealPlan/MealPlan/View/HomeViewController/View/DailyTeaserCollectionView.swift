@@ -21,8 +21,8 @@ class DailyTeaserCollectionView: UICollectionView, UICollectionViewDelegateFlowL
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("hi")
-        
     }
+    
 }
 
 extension DailyTeaserCollectionView: UICollectionViewDataSource {

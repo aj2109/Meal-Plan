@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="147" width="414" height="358.5"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P6E-pJ-EkC" customClass="DailyTeaserCollectionView" customModule="MealPlan" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="20" width="394" height="338.5"/>
+                                        <rect key="frame" x="0.0" y="20" width="414" height="338.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cTD-x4-2Oq">
                                             <size key="itemSize" width="128" height="128"/>
@@ -72,8 +72,8 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="P6E-pJ-EkC" secondAttribute="bottom" id="A5M-90-OKt"/>
                                     <constraint firstItem="P6E-pJ-EkC" firstAttribute="top" secondItem="LcX-Sg-FTy" secondAttribute="top" constant="20" id="O9c-Ob-fbe"/>
-                                    <constraint firstAttribute="trailing" secondItem="P6E-pJ-EkC" secondAttribute="trailing" constant="10" id="oRb-jW-wXD"/>
-                                    <constraint firstItem="P6E-pJ-EkC" firstAttribute="leading" secondItem="LcX-Sg-FTy" secondAttribute="leading" constant="10" id="vt4-xA-YvL"/>
+                                    <constraint firstAttribute="trailing" secondItem="P6E-pJ-EkC" secondAttribute="trailing" id="oRb-jW-wXD"/>
+                                    <constraint firstItem="P6E-pJ-EkC" firstAttribute="leading" secondItem="LcX-Sg-FTy" secondAttribute="leading" id="vt4-xA-YvL"/>
                                 </constraints>
                             </view>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXT-FW-IEo" userLabel="UnsureWhatGoesInHereView">
