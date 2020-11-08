@@ -76,13 +76,40 @@
                                     <constraint firstItem="P6E-pJ-EkC" firstAttribute="leading" secondItem="LcX-Sg-FTy" secondAttribute="leading" id="vt4-xA-YvL"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXT-FW-IEo" userLabel="UnsureWhatGoesInHereView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXT-FW-IEo" userLabel="UnsureWhatGoesInHereView">
                                 <rect key="frame" x="0.0" y="436" width="414" height="460"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <subviews>
+                                    <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WX3-GP-1ch">
+                                        <rect key="frame" x="0.0" y="360" width="414" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="esb-WV-eCr"/>
+                                        </constraints>
+                                        <items>
+                                            <tabBarItem systemItem="featured" id="xpH-9D-9xq"/>
+                                            <tabBarItem systemItem="history" id="1Wp-So-bzO"/>
+                                            <tabBarItem systemItem="more" id="XSC-Vc-3tl"/>
+                                        </items>
+                                    </tabBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's happening today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-5y-Hvl">
+                                        <rect key="frame" x="95.5" y="36" width="223.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WX3-GP-1ch" secondAttribute="trailing" id="0Xd-is-4xh"/>
+                                    <constraint firstItem="WX3-GP-1ch" firstAttribute="leading" secondItem="gXT-FW-IEo" secondAttribute="leading" id="Ed0-o6-fDb"/>
+                                    <constraint firstItem="EqM-5y-Hvl" firstAttribute="top" secondItem="gXT-FW-IEo" secondAttribute="top" constant="36" id="azu-Ej-wpy"/>
+                                    <constraint firstAttribute="bottom" secondItem="WX3-GP-1ch" secondAttribute="bottom" symbolic="YES" id="eSF-g7-uRy"/>
+                                    <constraint firstItem="EqM-5y-Hvl" firstAttribute="centerX" secondItem="gXT-FW-IEo" secondAttribute="centerX" id="pYE-5s-RPN"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LcX-Sg-FTy" secondAttribute="trailing" id="3mG-qs-cMF"/>
                             <constraint firstAttribute="bottom" secondItem="gXT-FW-IEo" secondAttribute="bottom" id="8XK-BN-NZW"/>

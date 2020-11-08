@@ -15,7 +15,6 @@ class HomeViewController: UIViewController, Downloading {
     
     var userInteracted = false
     
-    var lastTimestamp = TimeInterval()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,20 +31,14 @@ class HomeViewController: UIViewController, Downloading {
     
     @objc func moveCollectionView(displaylink: CADisplayLink) {
         guard !userInteracted else {
-            DispatchQueue.global().asyncAfter(deadline: .now() + 4) { 
+            DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
                 self.userInteracted = false
             }
             return
         }
-        
         let duration = displaylink.duration
-        print("elapsed time: \(duration)")
-        
-        self.lastTimestamp = displaylink.timestamp
-
         let offset = self.collectionView.contentOffset.x
         let newOffset = Double(offset) + 10 * duration
-        print("new offset: \(newOffset)")
         self.collectionView.contentOffset = CGPoint(x: newOffset, y: 0)
     }
     
