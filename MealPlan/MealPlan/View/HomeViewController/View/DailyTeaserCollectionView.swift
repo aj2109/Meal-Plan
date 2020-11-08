@@ -16,13 +16,16 @@ class DailyTeaserCollectionView: UICollectionView, UICollectionViewDelegateFlowL
     var temporaryMealList: [String] = []
     var temporaryNutrients: [Nutrients] = [Nutrients(carbs: 200, fat: 80, protein: 100, calories: 2400), Nutrients(carbs: 220, fat: 90, protein: 110, calories: 2500), Nutrients(carbs: 190, fat: 90, protein: 100, calories: 2384), Nutrients(carbs: 200, fat: 80, protein: 100, calories: 2400), Nutrients(carbs: 220, fat: 90, protein: 110, calories: 2500), Nutrients(carbs: 190, fat: 90, protein: 100, calories: 2384), Nutrients(carbs: 200, fat: 80, protein: 100, calories: 2400)]
     
+    weak var parentVC: HomeViewController?
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: collectionView.frame.height)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("hi")
+
     }
-    
+
+
 }
 
 extension DailyTeaserCollectionView: UICollectionViewDataSource {
