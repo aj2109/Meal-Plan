@@ -98,6 +98,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="P6E-pJ-EkC" id="ps3-Ew-6lh"/>
+                        <outlet property="collectionViewContainerView" destination="LcX-Sg-FTy" id="WY4-ju-5Rj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
