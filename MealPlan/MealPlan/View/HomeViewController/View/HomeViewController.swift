@@ -13,15 +13,9 @@ class HomeViewController: UIViewController, Downloading {
     
     @IBOutlet weak var collectionViewContainerView: UIView!
     
-    var userInteracted = false {
-        willSet {
-            if newValue {
-                self.startTimer()
-            }
-        }
-    }
-        
-    var timer = Timer()
+    var userInteracted = false
+    
+    var lastTimestamp = TimeInterval()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,28 +26,27 @@ class HomeViewController: UIViewController, Downloading {
     }
     
     @objc private func autoScroll() {
+        let displaylink = CADisplayLink(target: self,selector: #selector(moveCollectionView))
+        displaylink.add(to: .current, forMode: .default)
+    }
+    
+    @objc func moveCollectionView(displaylink: CADisplayLink) {
         guard !userInteracted else {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 4) { 
+                self.userInteracted = false
+            }
             return
         }
-        let offset = collectionView.contentOffset.x
-        let newOffset = offset + 0.5
-        //only want this to be called 30 times a second as this is all the screen can handle 0.033*30 = 1
-        UIView.animate(withDuration: 0.033333, delay: 0, options: .curveEaseInOut, animations: { [weak self]() -> Void in
-            self?.collectionView.contentOffset = CGPoint(x: newOffset, y: 0)
-        }) { [weak self](finished) -> Void in
-            self?.autoScroll()
-        }
-    }
-    
-    private func startTimer() {
-        timer.invalidate()
-        userInteracted = false
-        timer = Timer(fireAt: Date() + 3, interval: 3, target: self, selector: #selector(autoScroll), userInfo: nil, repeats: false)
-        timer.fire()
-    }
-    
-    @objc private func uiTouched() {
-        userInteracted = true
+        
+        let duration = displaylink.duration
+        print("elapsed time: \(duration)")
+        
+        self.lastTimestamp = displaylink.timestamp
+
+        let offset = self.collectionView.contentOffset.x
+        let newOffset = Double(offset) + 10 * duration
+        print("new offset: \(newOffset)")
+        self.collectionView.contentOffset = CGPoint(x: newOffset, y: 0)
     }
     
 }

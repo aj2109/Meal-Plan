@@ -22,10 +22,9 @@ class DailyTeaserCollectionView: UICollectionView, UICollectionViewDelegateFlowL
         return CGSize(width: collectionView.bounds.width, height: collectionView.frame.height)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        self.parentVC?.userInteracted = true
     }
-
-
+    
 }
 
 extension DailyTeaserCollectionView: UICollectionViewDataSource {
@@ -33,7 +32,7 @@ extension DailyTeaserCollectionView: UICollectionViewDataSource {
     //data source
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 100000
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -42,8 +41,9 @@ extension DailyTeaserCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DailyTeaserCell", for: indexPath) as? DailyTeaserCollectionViewCell {
-            cell.setup(image: temporaryImageArray[indexPath.row], dayName: temporaryDayNameArray[indexPath.row], nutrients: temporaryNutrients[indexPath.row
+            cell.setup(image: temporaryImageArray[indexPath.row % 7], dayName: temporaryDayNameArray[indexPath.row % 7], nutrients: temporaryNutrients[indexPath.row % 7
             ])
+            print(indexPath.row)
             return cell
         } else {
             return UICollectionViewCell()
