@@ -8,6 +8,14 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,18 +26,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctZ-Fl-W3g" userLabel="WelcomeTextContainerView">
-                                <rect key="frame" x="20" y="64" width="229" height="75"/>
+                                <rect key="frame" x="20" y="64" width="251" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="No9-M9-zXc">
-                                        <rect key="frame" x="0.0" y="0.0" width="205" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="227" height="34"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's get you some food!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkz-k5-1CC">
-                                        <rect key="frame" x="0.0" y="44" width="221" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="42" width="243" height="28"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -79,37 +87,37 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXT-FW-IEo" userLabel="UnsureWhatGoesInHereView">
                                 <rect key="frame" x="0.0" y="436" width="414" height="460"/>
                                 <subviews>
-                                    <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WX3-GP-1ch">
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y09-IB-DLg">
                                         <rect key="frame" x="0.0" y="360" width="414" height="100"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="esb-WV-eCr"/>
-                                        </constraints>
-                                        <items>
-                                            <tabBarItem systemItem="featured" id="xpH-9D-9xq"/>
-                                            <tabBarItem systemItem="history" id="1Wp-So-bzO"/>
-                                            <tabBarItem systemItem="more" id="XSC-Vc-3tl"/>
-                                        </items>
-                                    </tabBar>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's happening today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-5y-Hvl">
-                                        <rect key="frame" x="95.5" y="36" width="223.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <rect key="frame" x="81.5" y="75" width="251" height="28"/>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What should go here?! Be cool if could swipe this up and it brings you to today vc..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09a-7U-ZvM">
+                                        <rect key="frame" x="50" y="229" width="314" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="WX3-GP-1ch" secondAttribute="trailing" id="0Xd-is-4xh"/>
-                                    <constraint firstItem="WX3-GP-1ch" firstAttribute="leading" secondItem="gXT-FW-IEo" secondAttribute="leading" id="Ed0-o6-fDb"/>
-                                    <constraint firstItem="EqM-5y-Hvl" firstAttribute="top" secondItem="gXT-FW-IEo" secondAttribute="top" constant="36" id="azu-Ej-wpy"/>
-                                    <constraint firstAttribute="bottom" secondItem="WX3-GP-1ch" secondAttribute="bottom" symbolic="YES" id="eSF-g7-uRy"/>
+                                    <constraint firstItem="EqM-5y-Hvl" firstAttribute="top" secondItem="gXT-FW-IEo" secondAttribute="top" constant="75" id="azu-Ej-wpy"/>
+                                    <constraint firstItem="09a-7U-ZvM" firstAttribute="leading" secondItem="gXT-FW-IEo" secondAttribute="leading" constant="50" id="c8B-eT-k12"/>
+                                    <constraint firstItem="09a-7U-ZvM" firstAttribute="top" secondItem="EqM-5y-Hvl" secondAttribute="bottom" constant="126" id="iXP-n9-84N"/>
                                     <constraint firstItem="EqM-5y-Hvl" firstAttribute="centerX" secondItem="gXT-FW-IEo" secondAttribute="centerX" id="pYE-5s-RPN"/>
+                                    <constraint firstAttribute="trailing" secondItem="09a-7U-ZvM" secondAttribute="trailing" constant="50" id="rjd-uz-aq2"/>
+                                    <constraint firstItem="09a-7U-ZvM" firstAttribute="centerX" secondItem="EqM-5y-Hvl" secondAttribute="centerX" id="vRX-9w-DIG"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.31372549019607843" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LcX-Sg-FTy" secondAttribute="trailing" id="3mG-qs-cMF"/>
                             <constraint firstAttribute="bottom" secondItem="gXT-FW-IEo" secondAttribute="bottom" id="8XK-BN-NZW"/>
@@ -124,6 +132,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomViewContainer" destination="gXT-FW-IEo" id="PGD-fM-Tqo"/>
                         <outlet property="collectionView" destination="P6E-pJ-EkC" id="ps3-Ew-6lh"/>
                         <outlet property="collectionViewContainerView" destination="LcX-Sg-FTy" id="WY4-ju-5Rj"/>
                     </connections>
@@ -134,8 +143,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

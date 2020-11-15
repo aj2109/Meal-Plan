@@ -29,7 +29,7 @@ class DailyTeaserCollectionViewCell: UICollectionViewCell {
             label.widthAnchor.constraint(equalToConstant: self.frame.width / 2),
             label.heightAnchor.constraint(equalToConstant: 100)
         ])
-        label.font = UIFont.systemFont(ofSize: 35, weight: .medium)
+        label.font = UIFont(name: "Poppins", size: 30)
         label.textColor = .black
         return label
     }()
@@ -74,13 +74,13 @@ class DailyTeaserCollectionViewCell: UICollectionViewCell {
     
     private func setupNutrients(nutrients: Nutrients) {
         let attributedText = NSMutableAttributedString()
-        attributedText.append(NSMutableAttributedString(string: "Calories: " + String(nutrients.calories), attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.white]))
+        attributedText.append(NSMutableAttributedString(string: "Calories: " + String(nutrients.calories), attributes: [NSAttributedString.Key.font : UIFont(name: "Poppins", size: 18)!, NSAttributedString.Key.foregroundColor: UIColor.white]))
         attributedText.append(NSAttributedString(string: "\n"))
-        attributedText.append(NSMutableAttributedString(string: "Protein: " + String(nutrients.protein), attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.white]))
+        attributedText.append(NSMutableAttributedString(string: "Protein: " + String(nutrients.protein), attributes: [NSAttributedString.Key.font : UIFont(name: "Poppins", size: 18)!, NSAttributedString.Key.foregroundColor: UIColor.white]))
         attributedText.append(NSAttributedString(string: "\n"))
-        attributedText.append(NSMutableAttributedString(string: "Carbs: " + String(nutrients.carbs), attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.white]))
+        attributedText.append(NSMutableAttributedString(string: "Carbs: " + String(nutrients.carbs), attributes: [NSAttributedString.Key.font : UIFont(name: "Poppins", size: 18)!, NSAttributedString.Key.foregroundColor: UIColor.white]))
         attributedText.append(NSAttributedString(string: "\n"))
-        attributedText.append(NSMutableAttributedString(string: "Fat: " + String(nutrients.fat), attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor: UIColor.white]))
+        attributedText.append(NSMutableAttributedString(string: "Fat: " + String(nutrients.fat), attributes: [NSAttributedString.Key.font : UIFont(name: "Poppins", size: 18)!, NSAttributedString.Key.foregroundColor: UIColor.white]))
         nutrientsTextView.attributedText = attributedText
     }
 

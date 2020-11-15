@@ -12,6 +12,7 @@ class HomeViewController: UIViewController, Downloading {
     @IBOutlet weak var collectionView: DailyTeaserCollectionView!
     
     @IBOutlet weak var collectionViewContainerView: UIView!
+    @IBOutlet weak var bottomViewContainer: UIView!
     
     var userInteracted = false
     
@@ -22,11 +23,17 @@ class HomeViewController: UIViewController, Downloading {
         collectionView.delegate = collectionView
         collectionView.parentVC = self
         autoScroll()
+        bottomViewContainer.curveEdges(edges: [.layerMinXMinYCorner, .layerMaxXMinYCorner], cornerRadius: 200)
+        view.gradientBackground(firstColor: UIColor.purple, secondColour: self.view.backgroundColor!)
     }
     
     @objc private func autoScroll() {
         let displaylink = CADisplayLink(target: self,selector: #selector(moveCollectionView))
         displaylink.add(to: .current, forMode: .default)
+//        displaylink.isPaused = true
+//        DispatchQueue.global().asyncAfter(deadline: .now() + 5) {
+//            displaylink.isPaused = false // can use this to determine whether it should be starting or stopping
+//        }
     }
     
     @objc func moveCollectionView(displaylink: CADisplayLink) {

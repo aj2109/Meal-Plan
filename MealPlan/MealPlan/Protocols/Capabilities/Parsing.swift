@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol Parsing {
     
     func parseData<T: Codable>(data: Data, completion: @escaping (T?, Error?)->())

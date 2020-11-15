@@ -28,9 +28,7 @@ class DailyTeaserCollectionView: UICollectionView, UICollectionViewDelegateFlowL
 }
 
 extension DailyTeaserCollectionView: UICollectionViewDataSource {
-    
-    //data source
-    
+        
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100000
     }
