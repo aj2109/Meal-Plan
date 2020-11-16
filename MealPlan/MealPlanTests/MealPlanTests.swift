@@ -45,6 +45,7 @@ extension MealPlanTests: Downloading {
                 return
             }
             XCTAssertNotNil(data)
+            print("Test PASSED - testNetworkingData")
             semaphore.signal()
         }
         semaphore.wait()
@@ -61,6 +62,7 @@ extension MealPlanTests: Downloading {
                 return
             }
             XCTAssertNotNil(image)
+            print("Test PASSED - testNetworkingImage")
             semaphore.signal()
         }
         semaphore.wait()
