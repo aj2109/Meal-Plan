@@ -68,6 +68,7 @@
 		05863B89254D57A500942AD4 /* DailyTeaserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05863B88254D57A500942AD4 /* DailyTeaserViewModel.swift */; };
 		05863B8E254D57B500942AD4 /* DailyTeaserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05863B8D254D57B500942AD4 /* DailyTeaserCollectionViewCell.swift */; };
 		05863B93254D57BF00942AD4 /* DailyTeaserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05863B92254D57BF00942AD4 /* DailyTeaserCellViewModel.swift */; };
+		05E6E55625627D9F003D1D0A /* AutoScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6E55525627D9F003D1D0A /* AutoScrolling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,7 @@
 		05863B88254D57A500942AD4 /* DailyTeaserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTeaserViewModel.swift; sourceTree = "<group>"; };
 		05863B8D254D57B500942AD4 /* DailyTeaserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTeaserCollectionViewCell.swift; sourceTree = "<group>"; };
 		05863B92254D57BF00942AD4 /* DailyTeaserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTeaserCellViewModel.swift; sourceTree = "<group>"; };
+		05E6E55525627D9F003D1D0A /* AutoScrolling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoScrolling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				0552F2682545B53A0062E418 /* Animating.swift */,
+				05E6E55525627D9F003D1D0A /* AutoScrolling.swift */,
 				05561DAD2545AB2C006B9B26 /* AnalyticsReporting.swift */,
 				05561DBC2545AC21006B9B26 /* Customisable.swift */,
 				05561D8F2545A997006B9B26 /* Downloading.swift */,
@@ -567,6 +570,7 @@
 				05561D982545A9AC006B9B26 /* Parsing.swift in Sources */,
 				05561D902545A997006B9B26 /* Downloading.swift in Sources */,
 				05561D7A2545A5DC006B9B26 /* MealViewController.swift in Sources */,
+				05E6E55625627D9F003D1D0A /* AutoScrolling.swift in Sources */,
 				05561DAE2545AB2C006B9B26 /* AnalyticsReporting.swift in Sources */,
 				0552F2692545B53A0062E418 /* Animating.swift in Sources */,
 				05561D8A2545A622006B9B26 /* PreferencesViewController.swift in Sources */,

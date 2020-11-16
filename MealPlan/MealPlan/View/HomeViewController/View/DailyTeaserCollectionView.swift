@@ -7,7 +7,19 @@
 
 import UIKit
 
-class DailyTeaserCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout {
+class DailyTeaserCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, AutoScrolling {
+
+    var displayLink: CADisplayLink!
+    
+    var stopAutoScrolling: Bool = false {
+        willSet {
+            if newValue {
+                pauseAutomaticResumeScroll {
+                    self.stopAutoScrolling = false
+                }
+            }
+        }
+    }
     
     var viewModel = DailyTeaserViewModel()
         
@@ -18,11 +30,16 @@ class DailyTeaserCollectionView: UICollectionView, UICollectionViewDelegateFlowL
     
     weak var parentVC: HomeViewController?
     
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        displayLink = initiateAutoScroll()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: collectionView.frame.height)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.parentVC?.userInteracted = true
+        self.stopAutoScrolling = true
     }
     
 }
