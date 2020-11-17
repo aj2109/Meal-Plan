@@ -87,10 +87,37 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXT-FW-IEo" userLabel="UnsureWhatGoesInHereView">
                                 <rect key="frame" x="0.0" y="436" width="414" height="460"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y09-IB-DLg">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y09-IB-DLg">
                                         <rect key="frame" x="0.0" y="360" width="414" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="896-tg-AFI">
+                                                <rect key="frame" x="94" y="0.0" width="226" height="49"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="49" id="u3a-ae-NSq"/>
+                                                </constraints>
+                                                <items>
+                                                    <tabBarItem systemItem="featured" id="Wtw-kj-Lzx"/>
+                                                    <tabBarItem systemItem="search" id="3lW-A9-yT0"/>
+                                                    <tabBarItem systemItem="history" id="Vl9-vy-Ssg"/>
+                                                    <tabBarItem systemItem="more" id="6tk-jP-1LS"/>
+                                                </items>
+                                                <color key="selectedImageTintColor" red="0.58399793840000003" green="0.33544790479999997" blue="0.56712208060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </tabBar>
+                                        </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="896-tg-AFI" secondAttribute="bottom" constant="51" id="4gd-bH-Kyw"/>
+                                            <constraint firstItem="896-tg-AFI" firstAttribute="centerX" secondItem="y09-IB-DLg" secondAttribute="centerX" id="LvV-nh-xVO"/>
+                                            <constraint firstItem="896-tg-AFI" firstAttribute="top" secondItem="y09-IB-DLg" secondAttribute="top" id="Mcg-0U-nny"/>
+                                            <constraint firstItem="896-tg-AFI" firstAttribute="leading" secondItem="y09-IB-DLg" secondAttribute="leading" constant="94" id="WDQ-ii-BEu"/>
+                                        </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's happening today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-5y-Hvl">
                                         <rect key="frame" x="81.5" y="75" width="251" height="28"/>
@@ -98,7 +125,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What should go here?! Be cool if could swipe this up and it brings you to today vc..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09a-7U-ZvM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="What should go here?! Be cool if could swipe this up and it brings you to today vc..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09a-7U-ZvM">
                                         <rect key="frame" x="50" y="229" width="314" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -107,8 +134,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="y09-IB-DLg" firstAttribute="centerX" secondItem="09a-7U-ZvM" secondAttribute="centerX" id="MlE-Et-8iL"/>
+                                    <constraint firstItem="y09-IB-DLg" firstAttribute="leading" secondItem="gXT-FW-IEo" secondAttribute="leading" id="TC5-Lt-U0o"/>
+                                    <constraint firstItem="y09-IB-DLg" firstAttribute="top" secondItem="09a-7U-ZvM" secondAttribute="bottom" constant="70" id="YT8-P4-v5i"/>
                                     <constraint firstItem="EqM-5y-Hvl" firstAttribute="top" secondItem="gXT-FW-IEo" secondAttribute="top" constant="75" id="azu-Ej-wpy"/>
                                     <constraint firstItem="09a-7U-ZvM" firstAttribute="leading" secondItem="gXT-FW-IEo" secondAttribute="leading" constant="50" id="c8B-eT-k12"/>
+                                    <constraint firstAttribute="bottom" secondItem="y09-IB-DLg" secondAttribute="bottom" id="dWg-2g-0QW"/>
                                     <constraint firstItem="09a-7U-ZvM" firstAttribute="top" secondItem="EqM-5y-Hvl" secondAttribute="bottom" constant="126" id="iXP-n9-84N"/>
                                     <constraint firstItem="EqM-5y-Hvl" firstAttribute="centerX" secondItem="gXT-FW-IEo" secondAttribute="centerX" id="pYE-5s-RPN"/>
                                     <constraint firstAttribute="trailing" secondItem="09a-7U-ZvM" secondAttribute="trailing" constant="50" id="rjd-uz-aq2"/>

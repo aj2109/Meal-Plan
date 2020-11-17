@@ -16,7 +16,6 @@ class HomeViewController: UIViewController, Downloading {
     
     var userInteracted = false
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = collectionView
@@ -24,6 +23,21 @@ class HomeViewController: UIViewController, Downloading {
         collectionView.parentVC = self
         bottomViewContainer.curveEdges(edges: [.layerMinXMinYCorner, .layerMaxXMinYCorner], cornerRadius: 200)
         view.gradientBackground(firstColor: UIColor.purple, secondColour: self.view.backgroundColor!)
+//        URLSession.shared.dataTask(with: (URL(string: "https://api.spoonacular.com/recipes/findByIngredients?apiKey=c51d42f89ad84d37a4e8cf098d305fae&ingredients=apples,+flour,+sugar&number=2")!)) { (data, response, error) in
+//            guard let data = data else {
+//                return
+//            }
+//            guard error == nil else {
+//                return
+//            }
+//            if let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) {
+//                print(json)
+//            }
+//            print("hi")
+//        }.resume()
+        //GET https://api.spoonacular.com/recipes/findByIngredients
+        //GET https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2
+        //https://spoonacular.com/food-api/docs#Search-Recipes-by-Ingredients
     }
     
 }
