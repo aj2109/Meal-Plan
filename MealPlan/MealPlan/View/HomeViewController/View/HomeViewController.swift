@@ -27,60 +27,49 @@ class HomeViewController: UIViewController, Downloading, Parsing {
             guard let data = data, error == nil else {
                 return
             }
+            var content: Content?
             do {
-                try self.decodeData(data: data)
+                content = try self.decodeData(data: data)
             } catch {
                 print("REEEEE")
             }
+            print("hi")
 //            parseData(type: _, data: data) { (parsedContents, error) in
 //                <#code#>
 //            }
-
+            print(content)
         }
     }
     
-    func decodeData(data: Data) throws {
-        let json = try JSONDecoder().decode(Content.self, from: data)
-        print(json)
+    func decodeData(data: Data) throws -> Content {
+        return try JSONDecoder().decode(Content.self, from: data)
     }
     
 }
 
 struct Content: Decodable {
     
-    public var results: [Result]
+    public var results: [results]
     
-    struct Result: Decodable {
+    struct results: Decodable {
         
+        var title: String
         var vegetarian: Bool
         var vegan: Bool
         var glutenFree: Bool
         var dairyFree: Bool
         var healthScore: Int
-        var nutrition: Nutrition
+        var nutrition: nutrition
         
-        struct Nutrition: Decodable {
+        struct nutrition: Decodable {
             
-            var nutrients: Nutrients
+            var nutrients: [nutrients]
             var ingredients: [Ingredients]
-            
-            struct Nutrients: Decodable {
-                enum CodingKeys: String, CodingKey, Decodable {
-                    case calories = "Calories"
-                    case fat = "Fat"
-                    case saturatedFat = "Saturated Fat"
-                    case carbohydrates = "Carbohydrates"
-                    case sugar = "Sugar"
-                    case salt = "Sodium"
-                    case fibre = "Fibre"
-                }
-                var calories: Int
-                var fat: Int
-                var saturatedFat: Int
-                var carbohydrates: Int
-                var sugar: Int
-                var salt: Int
-                var fibre: Int
+
+            struct nutrients: Decodable {
+                var title: String
+                var amount: Double
+                var unit: String
             }
             
             struct Ingredients: Decodable {
@@ -91,39 +80,4 @@ struct Content: Decodable {
             
         }
     }
-}
-
-
-
-
-struct A {
-    struct Week {
-        struct Day {
-            struct Meal {
-                struct Food {
-                    var name: String
-                    var quantity: Int = 1
-                    var avoided: Bool
-                    var allergies: Allergies
-                }
-                var foods: [Food]
-                var name: String
-                var nutrients: Nutrients
-                var image: UIImage
-                var description: String
-            }
-            var meals: [Meal]
-            var nutrients: Nutrients?
-            var dayName: DayName
-        }
-        var days: [Day]
-        var nutrients: Nutrients
-        var date: Date
-    }
-}
-
-enum Allergies {
-    case vegetarian
-    case vegan
-    case glutenFree
 }
