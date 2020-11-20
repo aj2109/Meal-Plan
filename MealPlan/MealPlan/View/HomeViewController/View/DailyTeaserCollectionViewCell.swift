@@ -78,7 +78,7 @@ class DailyTeaserCollectionViewCell: UICollectionViewCell {
         attributedText.append(NSAttributedString(string: "\n"))
         attributedText.append(NSMutableAttributedString(string: "Protein: " + String(nutrients.protein), attributes: [NSAttributedString.Key.font : UIFont(name: "Poppins", size: 18)!, NSAttributedString.Key.foregroundColor: UIColor.white]))
         attributedText.append(NSAttributedString(string: "\n"))
-        attributedText.append(NSMutableAttributedString(string: "Carbs: " + String(nutrients.carbs), attributes: [NSAttributedString.Key.font : UIFont(name: "Poppins", size: 18)!, NSAttributedString.Key.foregroundColor: UIColor.white]))
+//        attributedText.append(NSMutableAttributedString(string: "Carbs: " + String(nutrients.carbs), attributes: [NSAttributedString.Key.font : UIFont(name: "Poppins", size: 18)!, NSAttributedString.Key.foregroundColor: UIColor.white]))
         attributedText.append(NSAttributedString(string: "\n"))
         attributedText.append(NSMutableAttributedString(string: "Fat: " + String(nutrients.fat), attributes: [NSAttributedString.Key.font : UIFont(name: "Poppins", size: 18)!, NSAttributedString.Key.foregroundColor: UIColor.white]))
         nutrientsTextView.attributedText = attributedText

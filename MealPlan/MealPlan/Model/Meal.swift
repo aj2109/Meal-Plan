@@ -9,7 +9,6 @@ import UIKit
 
 struct Meal: BaseModel {
  
-    var foods: [Food]
     var name: String
     var nutrients: Nutrients
     var image: UIImage
@@ -19,9 +18,12 @@ struct Meal: BaseModel {
 
 struct Nutrients {
     
-    var carbs: Int
-    var fat: Int
-    var protein: Int
-    var calories: Int
+    var calories: Double
+    var carbohydrates: Double
+    var fat: Double
+    var protein: Double
+    var saturdatedFat: Double
+    var sugar: Double
+    var sodium: Double
     
 }

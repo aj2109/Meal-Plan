@@ -34,10 +34,29 @@ class HomeViewController: UIViewController, Downloading, Parsing {
                 print("REEEEE")
             }
             print("hi")
-//            parseData(type: _, data: data) { (parsedContents, error) in
-//                <#code#>
-//            }
             print(content)
+            guard let results = content?.results else {
+                return
+            }
+            var meals: [Meal] = []
+            for result in results {
+                var nutrients = Nutrients(calories: 0, carbohydrates: 0, fat: 0, protein: 0, saturdatedFat: 0, sugar: 0, sodium: 0)
+                result.nutrition.nutrients.forEach({ current in
+                    let value = current.amount
+                    switch current.title.lowercased() {
+                    case "calories": nutrients.calories = value
+                    case "fat": nutrients.fat = value
+                    case "saturated fat": nutrients.saturdatedFat = value
+                    case "carbohydrates": nutrients.carbohydrates = value
+                    case "protein": nutrients.protein = value
+                    case "sugar": nutrients.sugar = value
+                    case "sodium": nutrients.sodium = value
+                    default: break
+                    }
+                })
+                meals.append(Meal(name: result.title, nutrients: nutrients, image: UIImage(), description: result.summary))
+            }
+            print(meals)
         }
     }
     
@@ -54,6 +73,7 @@ struct Content: Decodable {
     struct results: Decodable {
         
         var title: String
+        var summary: String
         var vegetarian: Bool
         var vegan: Bool
         var glutenFree: Bool

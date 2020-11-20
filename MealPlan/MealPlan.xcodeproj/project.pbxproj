@@ -23,7 +23,6 @@
 		05561D0E25459F3A006B9B26 /* MealPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D0D25459F3A006B9B26 /* MealPlanTests.swift */; };
 		05561D1925459F3A006B9B26 /* MealPlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D1825459F3A006B9B26 /* MealPlanUITests.swift */; };
 		05561D3F2545A415006B9B26 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D3E2545A415006B9B26 /* Meal.swift */; };
-		05561D472545A422006B9B26 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D462545A422006B9B26 /* Food.swift */; };
 		05561D4C2545A42A006B9B26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D4B2545A42A006B9B26 /* User.swift */; };
 		05561D512545A443006B9B26 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D502545A443006B9B26 /* Day.swift */; };
 		05561D562545A449006B9B26 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D552545A449006B9B26 /* Week.swift */; };
@@ -111,7 +110,6 @@
 		05561D1825459F3A006B9B26 /* MealPlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanUITests.swift; sourceTree = "<group>"; };
 		05561D1A25459F3A006B9B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05561D3E2545A415006B9B26 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		05561D462545A422006B9B26 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		05561D4B2545A42A006B9B26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		05561D502545A443006B9B26 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		05561D552545A449006B9B26 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 		05561D2D2545A0FF006B9B26 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				05561D462545A422006B9B26 /* Food.swift */,
 				05561D3E2545A415006B9B26 /* Meal.swift */,
 				05561D502545A443006B9B26 /* Day.swift */,
 				05561D552545A449006B9B26 /* Week.swift */,
@@ -575,7 +572,6 @@
 				0552F2692545B53A0062E418 /* Animating.swift in Sources */,
 				05561D8A2545A622006B9B26 /* PreferencesViewController.swift in Sources */,
 				05863B7C254D56A600942AD4 /* HomeViewControllerViewModel.swift in Sources */,
-				05561D472545A422006B9B26 /* Food.swift in Sources */,
 				05561CF425459F39006B9B26 /* AppDelegate.swift in Sources */,
 				05561D682545A524006B9B26 /* UserViewModel.swift in Sources */,
 				0552F2882545C9720062E418 /* BaseViewModel.swift in Sources */,

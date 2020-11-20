@@ -7,7 +7,6 @@
 
 struct Preferences: BaseModel {
     
-    var avoidedFoods: [Food]
     var avoidedMeals: [Meal]
     var recentlyUsedMeals: [Meal]
     

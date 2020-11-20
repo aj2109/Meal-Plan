@@ -15,7 +15,8 @@ struct DayViewModel {
     }
     
     private func workoutNutrients() -> Nutrients? {
-        return Nutrients(carbs: 0, fat: 0, protein: 0, calories: 0) //write some shiz
+//        return Nutrients(carbs: 0, fat: 0, protein: 0, calories: 0) //write some shiz
+        return nil
     }
     
 }

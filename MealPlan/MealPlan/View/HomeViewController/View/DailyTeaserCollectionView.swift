@@ -26,7 +26,7 @@ class DailyTeaserCollectionView: UICollectionView, UICollectionViewDelegateFlowL
     var temporaryImageArray: [UIImage] = [#imageLiteral(resourceName: "Meal7"),#imageLiteral(resourceName: "Meal5"),#imageLiteral(resourceName: "Meal1"),#imageLiteral(resourceName: "Meal3"),#imageLiteral(resourceName: "Meal4"),#imageLiteral(resourceName: "Meal3"),#imageLiteral(resourceName: "Meal6"),#imageLiteral(resourceName: "Meal3")]
     var temporaryDayNameArray: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     var temporaryMealList: [String] = []
-    var temporaryNutrients: [Nutrients] = [Nutrients(carbs: 200, fat: 80, protein: 100, calories: 2400), Nutrients(carbs: 220, fat: 90, protein: 110, calories: 2500), Nutrients(carbs: 190, fat: 90, protein: 100, calories: 2384), Nutrients(carbs: 200, fat: 80, protein: 100, calories: 2400), Nutrients(carbs: 220, fat: 90, protein: 110, calories: 2500), Nutrients(carbs: 190, fat: 90, protein: 100, calories: 2384), Nutrients(carbs: 200, fat: 80, protein: 100, calories: 2400)]
+//    var temporaryNutrients: [Nutrients] = [Nutrients(carbs: 200, fat: 80, protein: 100, calories: 2400), Nutrients(carbs: 220, fat: 90, protein: 110, calories: 2500), Nutrients(carbs: 190, fat: 90, protein: 100, calories: 2384), Nutrients(carbs: 200, fat: 80, protein: 100, calories: 2400), Nutrients(carbs: 220, fat: 90, protein: 110, calories: 2500), Nutrients(carbs: 190, fat: 90, protein: 100, calories: 2384), Nutrients(carbs: 200, fat: 80, protein: 100, calories: 2400)]
     
     weak var parentVC: HomeViewController?
     
@@ -56,8 +56,8 @@ extension DailyTeaserCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DailyTeaserCell", for: indexPath) as? DailyTeaserCollectionViewCell {
-            cell.setup(image: temporaryImageArray[indexPath.row % 7], dayName: temporaryDayNameArray[indexPath.row % 7], nutrients: temporaryNutrients[indexPath.row % 7
-            ])
+//            cell.setup(image: temporaryImageArray[indexPath.row % 7], dayName: temporaryDayNameArray[indexPath.row % 7], nutrients: temporaryNutrients[indexPath.row % 7
+//            ])
             print(indexPath.row)
             return cell
         } else {
