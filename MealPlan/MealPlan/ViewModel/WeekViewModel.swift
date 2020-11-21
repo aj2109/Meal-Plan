@@ -11,41 +11,18 @@ class WeekViewModel: Downloading, Parsing {
     
     private var dayViewModels: [DayViewModel]!
     private var model: Week!
-    private var mealsForEachDay: [DayName:[Meal]]!
-    private var hasNotPassedAWeek: Bool {
-        return true //put in logic to check if its been a week since we last produced a meal plan
-    }
-    private var numberOfMealsADay = 3
     
     init() {
         setup()
     }
     
     private func setup() {
-        self.setupData(completion: { success in
-            guard success else {
-                fatalError("We've got no data :(")
-            }
-            self.instantiateWeek()
+        self.setupData(completion: { days, meals  in
+            self.instantiateWeek(days: days, meals: meals)
         })
     }
     
-    private func instantiateWeek() {
-        guard hasNotPassedAWeek else {
-            return
-        }
-        guard let _ = self.mealsForEachDay else {
-            fatalError("We should have this by now!")
-        }
-        var dayVMs: [DayViewModel] = []
-        for day in mealsForEachDay {
-            let dayVM = DayViewModel(meals: day.value, dayName: day.key)
-            dayVMs.append(dayVM)
-        }
-        self.dayViewModels = dayVMs
-    }
-    
-    private func setupData(completion: @escaping (_ success: Bool)->()) {
+    private func setupData(completion: @escaping (_ days: [Day], _ totalMeals: [Meal])->()) {
         downloadContent(type: Data(), url: Constants.apiURL, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData) { (data, error) in
             guard let data = data, error == nil else {
                 fatalError("No data from, or error (\(String(describing: error))) with, downloading!")
@@ -61,13 +38,13 @@ class WeekViewModel: Downloading, Parsing {
             }
             self.instantiateMealsForEachDay(results: results) { meals in
                 var days: [Day] = []
-                for i in 0..<7 {
-                    let meals = Array(meals[i*3..<(i*self.numberOfMealsADay)+(self.numberOfMealsADay)])
+                for i in 0..<Constants.numberOfDays {
+                    let meals = Array(meals[i*Constants.numberOfMealsADay..<(i*Constants.numberOfMealsADay)+(Constants.numberOfMealsADay)])
                     days.append(Day(meals: meals,
                                     nutrients: self.workoutTotalNutrients(meals: meals),
-                                    dayName: DayName.allCases[i]))
+                                    dayName: DayName.allCases[i])) //need to make this switch over if needed, use modulus?
                 }
-                print(days)
+                completion(days, meals)
             }
         }
     }
@@ -75,7 +52,7 @@ class WeekViewModel: Downloading, Parsing {
     private func instantiateMealsForEachDay(results: [ParsedResult], completion: @escaping ([Meal])->()) {
         var meals: [Meal] = [] {
             didSet {
-                if meals.count == 21 {
+                if meals.count == Constants.numberOfMealsADay * Constants.numberOfDays {
                     completion(meals)
                 }
             }
@@ -119,6 +96,13 @@ class WeekViewModel: Downloading, Parsing {
             nutrients.sodium += meal.nutrients.sodium
         })
         return nutrients
+    }
+    
+    private func instantiateWeek(days: [Day], meals: [Meal]) {
+        //TODO: deal with checking if a week has passed here (though could be manually forced refresh too so should be param)
+        //TODO work out beginning of weeks date, and probably add an end date?
+        let week = Week(days: days, nutrients: workoutTotalNutrients(meals: meals), date: Date())
+        dump(week)
     }
         
 }

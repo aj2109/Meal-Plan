@@ -350,9 +350,25 @@
             filePath = "MealPlan/ViewModel/WeekViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "workoutTotalNutrients(meals:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8857B00E-D40F-40CF-8BFD-3CF619247BBB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MealPlan/ViewModel/WeekViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "instantiateWeek(days:meals:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
