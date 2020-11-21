@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct Nutrients {
-    
-    var carbohydrates: Double
-    var fat: Double
-    var protein: Double
-    var calories: Double
-    var saturdatedFat: Double
-    var sugar: Double
-    var sodium: Double
-    
-}
+//struct Nutrients {
+//    
+//    var carbohydrates: Double
+//    var fat: Double
+//    var protein: Double
+//    var calories: Double
+//    var saturdatedFat: Double
+//    var sugar: Double
+//    var sodium: Double
+//    
+//}
 
 enum DayName: String, CaseIterable {
    

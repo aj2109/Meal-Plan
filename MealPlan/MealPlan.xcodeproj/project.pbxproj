@@ -39,6 +39,7 @@
 		05561DCC2545AD26006B9B26 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561DCB2545AD26006B9B26 /* Networking.swift */; };
 		0564CBF8256928B8003D71C4 /* ConvenienceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0564CBF7256928B8003D71C4 /* ConvenienceModels.swift */; };
 		0564CBFD256928D8003D71C4 /* FeedMatchingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0564CBFC256928D8003D71C4 /* FeedMatchingModel.swift */; };
+		0564CC2425696BD7003D71C4 /* MealPlan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0564CC2225696BD7003D71C4 /* MealPlan.xcdatamodeld */; };
 		0569CC992561925A00F4BBB3 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0569CC802561924C00F4BBB3 /* Poppins-BlackItalic.ttf */; };
 		0569CC9A2561925A00F4BBB3 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0569CC8A2561924D00F4BBB3 /* Poppins-LightItalic.ttf */; };
 		0569CC9B2561925A00F4BBB3 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0569CC872561924D00F4BBB3 /* Poppins-Medium.ttf */; };
@@ -123,6 +124,7 @@
 		05561DCB2545AD26006B9B26 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		0564CBF7256928B8003D71C4 /* ConvenienceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceModels.swift; sourceTree = "<group>"; };
 		0564CBFC256928D8003D71C4 /* FeedMatchingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMatchingModel.swift; sourceTree = "<group>"; };
+		0564CC2325696BD7003D71C4 /* MealPlan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MealPlan.xcdatamodel; sourceTree = "<group>"; };
 		0569CC802561924C00F4BBB3 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
 		0569CC812561924D00F4BBB3 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
 		0569CC822561924D00F4BBB3 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				05561CF225459F39006B9B26 /* MealPlan */,
+				0564CC2825696BE3003D71C4 /* Core Data */,
 				05561D0C25459F3A006B9B26 /* MealPlanTests */,
 				05561D1725459F3A006B9B26 /* MealPlanUITests */,
 				05561CF125459F39006B9B26 /* Products */,
@@ -317,6 +320,14 @@
 				05863B73254D538700942AD4 /* BaseCollectionViewCell.swift */,
 			);
 			path = Bases;
+			sourceTree = "<group>";
+		};
+		0564CC2825696BE3003D71C4 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				0564CC2225696BD7003D71C4 /* MealPlan.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 		0569CC7E2561923F00F4BBB3 /* Fonts */ = {
@@ -565,6 +576,7 @@
 				0552F2882545C9720062E418 /* BaseViewModel.swift in Sources */,
 				0564CBF8256928B8003D71C4 /* ConvenienceModels.swift in Sources */,
 				0552F2902545CA2A0062E418 /* BaseModel.swift in Sources */,
+				0564CC2425696BD7003D71C4 /* MealPlan.xcdatamodeld in Sources */,
 				05561DB82545AB9B006B9B26 /* Rotatable.swift in Sources */,
 				05561CF625459F39006B9B26 /* SceneDelegate.swift in Sources */,
 				05561D652545A524006B9B26 /* MealViewModel.swift in Sources */,
@@ -907,6 +919,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0564CC2225696BD7003D71C4 /* MealPlan.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0564CC2325696BD7003D71C4 /* MealPlan.xcdatamodel */,
+			);
+			currentVersion = 0564CC2325696BD7003D71C4 /* MealPlan.xcdatamodel */;
+			path = MealPlan.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 05561CE825459F39006B9B26 /* Project object */;
 }

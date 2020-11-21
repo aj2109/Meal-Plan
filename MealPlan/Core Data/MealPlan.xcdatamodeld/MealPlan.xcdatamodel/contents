@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19G73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Day" representedClassName="Day" syncable="YES" codeGenerationType="class">
+        <attribute name="dayName" optional="YES" attributeType="String"/>
+        <relationship name="meals" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Meal" inverseName="day" inverseEntity="Meal"/>
+        <relationship name="nutrients" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Nutrients" inverseName="day" inverseEntity="Nutrients"/>
+        <relationship name="week" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Week" inverseName="days" inverseEntity="Week"/>
+    </entity>
+    <entity name="Meal" representedClassName="Meal" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+        <relationship name="day" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="meals" inverseEntity="Day"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Nutrients" inverseName="meal" inverseEntity="Nutrients"/>
+    </entity>
+    <entity name="Nutrients" representedClassName="Nutrients" syncable="YES" codeGenerationType="class">
+        <attribute name="calories" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="carbohydrates" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="fat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="protein" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="saturatedFat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="sodium" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="sugar" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="day" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="nutrients" inverseEntity="Day"/>
+        <relationship name="meal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Meal" inverseName="relationship" inverseEntity="Meal"/>
+        <relationship name="week" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Week" inverseName="nutrients" inverseEntity="Week"/>
+    </entity>
+    <entity name="Week" representedClassName="Week" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="days" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="week" inverseEntity="Day"/>
+        <relationship name="nutrients" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Nutrients" inverseName="week" inverseEntity="Nutrients"/>
+    </entity>
+    <elements>
+        <element name="Week" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Meal" positionX="-54" positionY="-9" width="128" height="118"/>
+        <element name="Day" positionX="-36" positionY="9" width="128" height="103"/>
+        <element name="Nutrients" positionX="0" positionY="81" width="128" height="193"/>
+    </elements>
+</model>

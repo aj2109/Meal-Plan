@@ -72,6 +72,7 @@ class WeekViewModel: Downloading, Parsing {
                 }
             })
             guard let url = URL(string: result.image) else {
+                let mealy = Meal()
                 meals.append(Meal(name: result.title, nutrients: nutrients, image: nil, description: result.summary))
                 continue
             }
