@@ -24,8 +24,7 @@
 		05561D1925459F3A006B9B26 /* MealPlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D1825459F3A006B9B26 /* MealPlanUITests.swift */; };
 		05561D4C2545A42A006B9B26 /* UserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D4B2545A42A006B9B26 /* UserModels.swift */; };
 		05561D562545A449006B9B26 /* MealModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D552545A449006B9B26 /* MealModels.swift */; };
-		05561D652545A524006B9B26 /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D5F2545A524006B9B26 /* WeekViewModel.swift */; };
-		05561D662545A524006B9B26 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D602545A524006B9B26 /* DayViewModel.swift */; };
+		05561D652545A524006B9B26 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D5F2545A524006B9B26 /* MealViewModel.swift */; };
 		05561D682545A524006B9B26 /* UserViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D622545A524006B9B26 /* UserViewModels.swift */; };
 		05561D6F2545A533006B9B26 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D6E2545A533006B9B26 /* HelperViewController.swift */; };
 		05561D7A2545A5DC006B9B26 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D792545A5DC006B9B26 /* MealViewController.swift */; };
@@ -109,8 +108,7 @@
 		05561D1A25459F3A006B9B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05561D4B2545A42A006B9B26 /* UserModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModels.swift; sourceTree = "<group>"; };
 		05561D552545A449006B9B26 /* MealModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModels.swift; sourceTree = "<group>"; };
-		05561D5F2545A524006B9B26 /* WeekViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
-		05561D602545A524006B9B26 /* DayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
+		05561D5F2545A524006B9B26 /* MealViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		05561D622545A524006B9B26 /* UserViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModels.swift; sourceTree = "<group>"; };
 		05561D6E2545A533006B9B26 /* HelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
 		05561D792545A5DC006B9B26 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
@@ -260,8 +258,7 @@
 		05561D2F2545A111006B9B26 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				05561D602545A524006B9B26 /* DayViewModel.swift */,
-				05561D5F2545A524006B9B26 /* WeekViewModel.swift */,
+				05561D5F2545A524006B9B26 /* MealViewModel.swift */,
 				05561D622545A524006B9B26 /* UserViewModels.swift */,
 			);
 			path = ViewModel;
@@ -542,7 +539,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				05863B84254D574700942AD4 /* DailyTeaserCollectionView.swift in Sources */,
-				05561D662545A524006B9B26 /* DayViewModel.swift in Sources */,
 				05561DCC2545AD26006B9B26 /* Networking.swift in Sources */,
 				0564CBFD256928D8003D71C4 /* FeedMatchingModel.swift in Sources */,
 				05561D562545A449006B9B26 /* MealModels.swift in Sources */,
@@ -571,7 +567,7 @@
 				0552F2902545CA2A0062E418 /* BaseModel.swift in Sources */,
 				05561DB82545AB9B006B9B26 /* Rotatable.swift in Sources */,
 				05561CF625459F39006B9B26 /* SceneDelegate.swift in Sources */,
-				05561D652545A524006B9B26 /* WeekViewModel.swift in Sources */,
+				05561D652545A524006B9B26 /* MealViewModel.swift in Sources */,
 				0569CCB0256195C800F4BBB3 /* UIViewExtension.swift in Sources */,
 				05863B93254D57BF00942AD4 /* DailyTeaserCellViewModel.swift in Sources */,
 				0552F2A52545F1870062E418 /* OnboardingViewController.swift in Sources */,

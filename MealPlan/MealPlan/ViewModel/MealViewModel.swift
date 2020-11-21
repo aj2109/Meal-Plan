@@ -9,7 +9,6 @@ import UIKit
 
 class WeekViewModel: Downloading, Parsing {
     
-    private var dayViewModels: [DayViewModel]!
     private var model: Week!
     
     init() {
@@ -103,6 +102,7 @@ class WeekViewModel: Downloading, Parsing {
         //TODO work out beginning of weeks date, and probably add an end date?
         let week = Week(days: days, nutrients: workoutTotalNutrients(meals: meals), date: Date())
         dump(week)
+        self.model = week
     }
         
 }
