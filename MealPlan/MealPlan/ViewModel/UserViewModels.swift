@@ -11,3 +11,10 @@ struct UserViewModel {
     
     
 }
+
+struct PreferencesViewModel: BaseViewModel {
+    
+    var model: BaseModel
+    var viewController: BaseViewController
+
+}

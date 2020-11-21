@@ -13,6 +13,13 @@ struct User: BaseModel {
     
 }
 
+struct Preferences: BaseModel {
+    
+    var avoidedMeals: [Meal]
+    var recentlyUsedMeals: [Meal]
+    
+}
+
 struct PersonalInformation {
     
     var name: String

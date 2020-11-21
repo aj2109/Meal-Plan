@@ -22,15 +22,11 @@
 		05561D0325459F3A006B9B26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05561D0125459F3A006B9B26 /* LaunchScreen.storyboard */; };
 		05561D0E25459F3A006B9B26 /* MealPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D0D25459F3A006B9B26 /* MealPlanTests.swift */; };
 		05561D1925459F3A006B9B26 /* MealPlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D1825459F3A006B9B26 /* MealPlanUITests.swift */; };
-		05561D3F2545A415006B9B26 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D3E2545A415006B9B26 /* Meal.swift */; };
-		05561D4C2545A42A006B9B26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D4B2545A42A006B9B26 /* User.swift */; };
-		05561D512545A443006B9B26 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D502545A443006B9B26 /* Day.swift */; };
-		05561D562545A449006B9B26 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D552545A449006B9B26 /* Week.swift */; };
-		05561D5B2545A4BA006B9B26 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D5A2545A4BA006B9B26 /* Preferences.swift */; };
+		05561D4C2545A42A006B9B26 /* UserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D4B2545A42A006B9B26 /* UserModels.swift */; };
+		05561D562545A449006B9B26 /* MealModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D552545A449006B9B26 /* MealModels.swift */; };
 		05561D652545A524006B9B26 /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D5F2545A524006B9B26 /* WeekViewModel.swift */; };
 		05561D662545A524006B9B26 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D602545A524006B9B26 /* DayViewModel.swift */; };
-		05561D682545A524006B9B26 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D622545A524006B9B26 /* UserViewModel.swift */; };
-		05561D6A2545A524006B9B26 /* PreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D642545A524006B9B26 /* PreferencesViewModel.swift */; };
+		05561D682545A524006B9B26 /* UserViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D622545A524006B9B26 /* UserViewModels.swift */; };
 		05561D6F2545A533006B9B26 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D6E2545A533006B9B26 /* HelperViewController.swift */; };
 		05561D7A2545A5DC006B9B26 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D792545A5DC006B9B26 /* MealViewController.swift */; };
 		05561D7F2545A600006B9B26 /* PersonalisationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561D7E2545A600006B9B26 /* PersonalisationViewController.swift */; };
@@ -42,6 +38,8 @@
 		05561DBD2545AC21006B9B26 /* Customisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561DBC2545AC21006B9B26 /* Customisable.swift */; };
 		05561DC72545ACE8006B9B26 /* Localisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561DC62545ACE8006B9B26 /* Localisable.swift */; };
 		05561DCC2545AD26006B9B26 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05561DCB2545AD26006B9B26 /* Networking.swift */; };
+		0564CBF8256928B8003D71C4 /* ConvenienceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0564CBF7256928B8003D71C4 /* ConvenienceModels.swift */; };
+		0564CBFD256928D8003D71C4 /* FeedMatchingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0564CBFC256928D8003D71C4 /* FeedMatchingModel.swift */; };
 		0569CC992561925A00F4BBB3 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0569CC802561924C00F4BBB3 /* Poppins-BlackItalic.ttf */; };
 		0569CC9A2561925A00F4BBB3 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0569CC8A2561924D00F4BBB3 /* Poppins-LightItalic.ttf */; };
 		0569CC9B2561925A00F4BBB3 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0569CC872561924D00F4BBB3 /* Poppins-Medium.ttf */; };
@@ -109,15 +107,11 @@
 		05561D1425459F3A006B9B26 /* MealPlanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealPlanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05561D1825459F3A006B9B26 /* MealPlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanUITests.swift; sourceTree = "<group>"; };
 		05561D1A25459F3A006B9B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		05561D3E2545A415006B9B26 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		05561D4B2545A42A006B9B26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		05561D502545A443006B9B26 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		05561D552545A449006B9B26 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
-		05561D5A2545A4BA006B9B26 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		05561D4B2545A42A006B9B26 /* UserModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModels.swift; sourceTree = "<group>"; };
+		05561D552545A449006B9B26 /* MealModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModels.swift; sourceTree = "<group>"; };
 		05561D5F2545A524006B9B26 /* WeekViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
 		05561D602545A524006B9B26 /* DayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
-		05561D622545A524006B9B26 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		05561D642545A524006B9B26 /* PreferencesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewModel.swift; sourceTree = "<group>"; };
+		05561D622545A524006B9B26 /* UserViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModels.swift; sourceTree = "<group>"; };
 		05561D6E2545A533006B9B26 /* HelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
 		05561D792545A5DC006B9B26 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		05561D7E2545A600006B9B26 /* PersonalisationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalisationViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +123,8 @@
 		05561DBC2545AC21006B9B26 /* Customisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customisable.swift; sourceTree = "<group>"; };
 		05561DC62545ACE8006B9B26 /* Localisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localisable.swift; sourceTree = "<group>"; };
 		05561DCB2545AD26006B9B26 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		0564CBF7256928B8003D71C4 /* ConvenienceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceModels.swift; sourceTree = "<group>"; };
+		0564CBFC256928D8003D71C4 /* FeedMatchingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMatchingModel.swift; sourceTree = "<group>"; };
 		0569CC802561924C00F4BBB3 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
 		0569CC812561924D00F4BBB3 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
 		0569CC822561924D00F4BBB3 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -238,11 +234,10 @@
 		05561D2D2545A0FF006B9B26 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				05561D3E2545A415006B9B26 /* Meal.swift */,
-				05561D502545A443006B9B26 /* Day.swift */,
-				05561D552545A449006B9B26 /* Week.swift */,
-				05561D4B2545A42A006B9B26 /* User.swift */,
-				05561D5A2545A4BA006B9B26 /* Preferences.swift */,
+				05561D552545A449006B9B26 /* MealModels.swift */,
+				05561D4B2545A42A006B9B26 /* UserModels.swift */,
+				0564CBF7256928B8003D71C4 /* ConvenienceModels.swift */,
+				0564CBFC256928D8003D71C4 /* FeedMatchingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,8 +262,7 @@
 			children = (
 				05561D602545A524006B9B26 /* DayViewModel.swift */,
 				05561D5F2545A524006B9B26 /* WeekViewModel.swift */,
-				05561D622545A524006B9B26 /* UserViewModel.swift */,
-				05561D642545A524006B9B26 /* PreferencesViewModel.swift */,
+				05561D622545A524006B9B26 /* UserViewModels.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -549,21 +543,19 @@
 			files = (
 				05863B84254D574700942AD4 /* DailyTeaserCollectionView.swift in Sources */,
 				05561D662545A524006B9B26 /* DayViewModel.swift in Sources */,
-				05561D6A2545A524006B9B26 /* PreferencesViewModel.swift in Sources */,
 				05561DCC2545AD26006B9B26 /* Networking.swift in Sources */,
-				05561D512545A443006B9B26 /* Day.swift in Sources */,
-				05561D562545A449006B9B26 /* Week.swift in Sources */,
+				0564CBFD256928D8003D71C4 /* FeedMatchingModel.swift in Sources */,
+				05561D562545A449006B9B26 /* MealModels.swift in Sources */,
 				0552F2642545B4B90062E418 /* BaseViewController.swift in Sources */,
 				05561D7F2545A600006B9B26 /* PersonalisationViewController.swift in Sources */,
 				05863B74254D538700942AD4 /* BaseCollectionViewCell.swift in Sources */,
 				05561D6F2545A533006B9B26 /* HelperViewController.swift in Sources */,
 				0552F29D2545F1760062E418 /* TabBarViewController.swift in Sources */,
-				05561D3F2545A415006B9B26 /* Meal.swift in Sources */,
 				0552F2982545E1630062E418 /* Constants.swift in Sources */,
 				05561CF825459F39006B9B26 /* HomeViewController.swift in Sources */,
 				05863B8E254D57B500942AD4 /* DailyTeaserCollectionViewCell.swift in Sources */,
 				05561DBD2545AC21006B9B26 /* Customisable.swift in Sources */,
-				05561D4C2545A42A006B9B26 /* User.swift in Sources */,
+				05561D4C2545A42A006B9B26 /* UserModels.swift in Sources */,
 				05561D982545A9AC006B9B26 /* Parsing.swift in Sources */,
 				05561D902545A997006B9B26 /* Downloading.swift in Sources */,
 				05561D7A2545A5DC006B9B26 /* MealViewController.swift in Sources */,
@@ -573,14 +565,14 @@
 				05561D8A2545A622006B9B26 /* PreferencesViewController.swift in Sources */,
 				05863B7C254D56A600942AD4 /* HomeViewControllerViewModel.swift in Sources */,
 				05561CF425459F39006B9B26 /* AppDelegate.swift in Sources */,
-				05561D682545A524006B9B26 /* UserViewModel.swift in Sources */,
+				05561D682545A524006B9B26 /* UserViewModels.swift in Sources */,
 				0552F2882545C9720062E418 /* BaseViewModel.swift in Sources */,
+				0564CBF8256928B8003D71C4 /* ConvenienceModels.swift in Sources */,
 				0552F2902545CA2A0062E418 /* BaseModel.swift in Sources */,
 				05561DB82545AB9B006B9B26 /* Rotatable.swift in Sources */,
 				05561CF625459F39006B9B26 /* SceneDelegate.swift in Sources */,
 				05561D652545A524006B9B26 /* WeekViewModel.swift in Sources */,
 				0569CCB0256195C800F4BBB3 /* UIViewExtension.swift in Sources */,
-				05561D5B2545A4BA006B9B26 /* Preferences.swift in Sources */,
 				05863B93254D57BF00942AD4 /* DailyTeaserCellViewModel.swift in Sources */,
 				0552F2A52545F1870062E418 /* OnboardingViewController.swift in Sources */,
 				05561DC72545ACE8006B9B26 /* Localisable.swift in Sources */,

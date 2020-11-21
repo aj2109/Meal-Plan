@@ -19,18 +19,20 @@ extension Downloading {
     //implement the protocols functions here - can make it return image, json, data etc
     
     func downloadContent<T>(type: T, url: URL, cachePolicy: NSURLRequest.CachePolicy, completion: @escaping (T?, Error?)->()) {
-        let urlRequest = URLRequest(url: url, cachePolicy: cachePolicy)
-        URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
-            guard let data = data, error == nil else {
-                completion(nil, error)
-                return
-            }
-            if T.self == UIImage.self {
-                completion(UIImage(data: data) as? T, nil)
-            } else if T.self == Data.self {
-                completion(data as? T, nil)
-            }
-        }).resume()
+        DispatchQueue.global(qos: .background).async {
+            let urlRequest = URLRequest(url: url, cachePolicy: cachePolicy)
+            URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+                guard let data = data, error == nil else {
+                    completion(nil, error)
+                    return
+                }
+                if T.self == UIImage.self {
+                    completion(UIImage(data: data) as? T ?? nil, nil)
+                } else if T.self == Data.self {
+                    completion(data as? T ?? nil, nil)
+                }
+            }).resume()
+        }
     }
     
 }

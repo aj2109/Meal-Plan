@@ -5,7 +5,7 @@
 //  Created by Adam Jessop on 25/10/2020.
 //
 
-import Foundation
+import UIKit
 
 class WeekViewModel: Downloading, Parsing {
     
@@ -30,9 +30,7 @@ class WeekViewModel: Downloading, Parsing {
     }
     
     private func instantiateWeek() {
-        //setupData must have been called prior to this point
         guard hasNotPassedAWeek else {
-            //SHOULD BE PULLING DATA FROM PERSISTENT STORAGE (Core Data?) if this is the case here. prob do an offline check too
             return
         }
         guard let _ = self.mealsForEachDay else {
@@ -46,27 +44,62 @@ class WeekViewModel: Downloading, Parsing {
         self.dayViewModels = dayVMs
     }
     
-    private func setupMealsForEachDay(meals: [Meal]) {
+    private func setupData(completion: @escaping (_ success: Bool)->()) {
+        downloadContent(type: Data(), url: Constants.apiURL, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData) { (data, error) in
+            guard let data = data, error == nil else {
+                fatalError("No data from, or error (\(String(describing: error))) with, downloading!")
+            }
+            var content: Content?
+            do {
+                content = try JSONDecoder().decode(Content.self, from: data)
+            } catch {
+                fatalError("Can't decode the feed!")
+            }
+            guard let results = content?.results else {
+                fatalError("No results from the decoded feed!")
+            }
+            self.instantiateMealsForEachDay(results: results) {meals in
+               
+            }
+        }
+    }
+    
+    private func instantiateMealsForEachDay(results: [ParsedResult], completion: @escaping ([Meal])->()) {
+        var meals: [Meal] = [] {
+            didSet {
+                if meals.count == 7 {
+                    completion(meals)
+                }
+            }
+        }
+        for result in results {
+            var nutrients = Nutrients(carbohydrates: 0, fat: 0, protein: 0, calories: 0, saturdatedFat: 0, sugar: 0, sodium: 0)
+            result.nutrition.nutrients.forEach({ current in
+                let value = current.amount
+                switch current.title.lowercased() {
+                case "calories": nutrients.calories = value
+                case "fat": nutrients.fat = value
+                case "saturated fat": nutrients.saturdatedFat = value
+                case "carbohydrates": nutrients.carbohydrates = value
+                case "protein": nutrients.protein = value
+                case "sugar": nutrients.sugar = value
+                case "sodium": nutrients.sodium = value
+                default: break
+                }
+            })
+            guard let url = URL(string: result.image) else {
+                meals.append(Meal(name: result.title, nutrients: nutrients, image: nil, description: result.summary))
+                continue
+            }
+            self.downloadContent(type: UIImage(), url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, completion: { (image, error) in
+                meals.append(Meal(name: result.title, nutrients: nutrients, image:
+                                    image ?? nil, description: result.summary))
+            })
+        }
+        
         //perform logic for putting foods into specific days, then combine them with the correct dayName:
         // self.mealsForEachDay[DayName.Monday.rawValue] = X meal
         //once finished should be able to call instaniateWeek?
     }
-    
-    
-    private func setupData(completion: @escaping (_ success: Bool)->()) {
-        downloadContent(type: Data(), url: URL(fileURLWithPath: "exampleURL"), cachePolicy: .reloadRevalidatingCacheData) { (data, error) in
-            guard error == nil else {
-                return
-            }
-            //parseContent
-            //create a pool of foods that can be used
-            //create a pool of meals that can be used
-            //setupMealsForEachDay()
-            //complete
-        }
-    }
-    
-    
+        
 }
-
-

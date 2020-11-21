@@ -14,8 +14,8 @@
             filePath = "MealPlan/Protocols/Capabilities/Downloading.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "downloadContent(type:url:cachePolicy:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "MealPlan/Protocols/Capabilities/Downloading.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "downloadContent(type:url:cachePolicy:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -279,161 +279,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C1E349B8-37BA-49F6-856A-448D169357EB"
+            uuid = "6ECFFF5A-B603-47CC-B662-3FA10616646F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MealPlan/View/HomeViewController/View/HomeViewController.swift"
+            filePath = "MealPlan/Protocols/Capabilities/Downloading.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "downloadContent(type:url:cachePolicy:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B161D5DC-4233-4903-BA6A-814164252D4E"
+            uuid = "DB9FAD8E-DFFE-464A-9BD5-290C9FA0FACB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MealPlan/View/HomeViewController/View/HomeViewController.swift"
+            filePath = "MealPlan/Protocols/Capabilities/Downloading.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "decodeData(data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4F6815F5-6CF6-40C6-B4FD-4B81ACDF6B88"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MealPlan/View/HomeViewController/View/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F3396994-4909-4724-A3A7-A8966B5EE111"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MealPlan/View/HomeViewController/View/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0209EE9D-E99F-4AEC-987F-111308FE548F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MealPlan/View/HomeViewController/View/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A830D6AE-E7BF-4F49-B2CD-6BE50693B38C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MealPlan/View/HomeViewController/View/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5E74D37B-5310-45CD-9311-0A134DACE89E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MealPlan/View/HomeViewController/View/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "downloadContent(type:url:cachePolicy:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "5E74D37B-5310-45CD-9311-0A134DACE89E - c378124eeb9e0f9f"
+                  uuid = "DB9FAD8E-DFFE-464A-9BD5-290C9FA0FACB - 650251cad1ab7b81"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MealPlan.HomeViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "(extension in MealPlan):MealPlan.Downloading.downloadContent&lt;A&gt;(type: A1, url: Foundation.URL, cachePolicy: __C.NSURLRequestCachePolicy, completion: (Swift.Optional&lt;A1&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "MealPlan"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/adamjessop/Documents/Personal/Meal-Plan/MealPlan/MealPlan/View/HomeViewController/View/HomeViewController.swift"
+                  urlString = "file:///Users/adamjessop/Documents/Personal/Meal-Plan/MealPlan/MealPlan/Protocols/Capabilities/Downloading.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "2330">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "446">
                </Location>
                <Location
-                  uuid = "5E74D37B-5310-45CD-9311-0A134DACE89E - 8a94b5412d15a0e1"
+                  uuid = "DB9FAD8E-DFFE-464A-9BD5-290C9FA0FACB - 8045f74635910185"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (MealPlan.Content.results.nutrition.nutrients) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MealPlan.HomeViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in (extension in MealPlan):MealPlan.Downloading.downloadContent&lt;A&gt;(type: A1, url: Foundation.URL, cachePolicy: __C.NSURLRequestCachePolicy, completion: (Swift.Optional&lt;A1&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "MealPlan"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/adamjessop/Documents/Personal/Meal-Plan/MealPlan/MealPlan/View/HomeViewController/View/HomeViewController.swift"
+                  urlString = "file:///Users/adamjessop/Documents/Personal/Meal-Plan/MealPlan/MealPlan/Protocols/Capabilities/Downloading.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "109">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "249">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E3CB1E51-76B9-4E82-A948-799A7554FE34"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MealPlan/View/HomeViewController/View/HomeViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
