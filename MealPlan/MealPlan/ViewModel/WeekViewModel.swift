@@ -15,6 +15,7 @@ class WeekViewModel: Downloading, Parsing {
     private var hasNotPassedAWeek: Bool {
         return true //put in logic to check if its been a week since we last produced a meal plan
     }
+    private var numberOfMealsADay = 3
     
     init() {
         setup()
@@ -58,8 +59,15 @@ class WeekViewModel: Downloading, Parsing {
             guard let results = content?.results else {
                 fatalError("No results from the decoded feed!")
             }
-            self.instantiateMealsForEachDay(results: results) {meals in
-               
+            self.instantiateMealsForEachDay(results: results) { meals in
+                var days: [Day] = []
+                for i in 0..<7 {
+                    let meals = Array(meals[i*3..<(i*self.numberOfMealsADay)+(self.numberOfMealsADay)])
+                    days.append(Day(meals: meals,
+                                    nutrients: self.workoutTotalNutrients(meals: meals),
+                                    dayName: DayName.allCases[i]))
+                }
+                print(days)
             }
         }
     }
@@ -67,7 +75,7 @@ class WeekViewModel: Downloading, Parsing {
     private func instantiateMealsForEachDay(results: [ParsedResult], completion: @escaping ([Meal])->()) {
         var meals: [Meal] = [] {
             didSet {
-                if meals.count == 7 {
+                if meals.count == 21 {
                     completion(meals)
                 }
             }
@@ -96,10 +104,21 @@ class WeekViewModel: Downloading, Parsing {
                                     image ?? nil, description: result.summary))
             })
         }
-        
-        //perform logic for putting foods into specific days, then combine them with the correct dayName:
-        // self.mealsForEachDay[DayName.Monday.rawValue] = X meal
-        //once finished should be able to call instaniateWeek?
+
+    }
+    
+    private func workoutTotalNutrients(meals: [Meal]) -> Nutrients {
+        var nutrients = Nutrients(carbohydrates: 0, fat: 0, protein: 0, calories: 0, saturdatedFat: 0, sugar: 0, sodium: 0)
+        meals.forEach({ (meal) in
+            nutrients.calories += meal.nutrients.calories
+            nutrients.carbohydrates += meal.nutrients.carbohydrates
+            nutrients.fat += meal.nutrients.fat
+            nutrients.protein += meal.nutrients.protein
+            nutrients.saturdatedFat += meal.nutrients.saturdatedFat
+            nutrients.sugar += meal.nutrients.sugar
+            nutrients.sodium += meal.nutrients.sodium
+        })
+        return nutrients
     }
         
 }

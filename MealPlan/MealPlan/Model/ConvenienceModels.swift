@@ -19,7 +19,9 @@ struct Nutrients {
     
 }
 
-enum DayName: String {
+enum DayName: String, CaseIterable {
+   
+    typealias RawValue = String
     
     case Monday
     case Tuesday
