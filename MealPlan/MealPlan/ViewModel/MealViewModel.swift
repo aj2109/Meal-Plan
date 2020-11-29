@@ -9,7 +9,7 @@ import UIKit
 
 class WeekViewModel: Downloading, Parsing {
     
-    private var model: Week!
+    var model: Week!
     
     init() {
         setup()
