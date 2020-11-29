@@ -23,7 +23,8 @@ class DailyTeaserCollectionView: UICollectionView, UICollectionViewDelegateFlowL
     
     weak var weekViewModel: WeekViewModel?    
     weak var parentVC: HomeViewController?
-    
+    var temporaryImageArray: [UIImage] = [#imageLiteral(resourceName: "Meal7"),#imageLiteral(resourceName: "Meal5"),#imageLiteral(resourceName: "Meal1"),#imageLiteral(resourceName: "Meal3"),#imageLiteral(resourceName: "Meal4"),#imageLiteral(resourceName: "Meal3"),#imageLiteral(resourceName: "Meal6"),#imageLiteral(resourceName: "Meal3")]
+
     override func didMoveToWindow() {
         super.didMoveToWindow()
         displayLink = initiateAutoScroll()
@@ -55,7 +56,7 @@ extension DailyTeaserCollectionView: UICollectionViewDataSource {
                 let model = weekViewModel.model,
                 let day = model.days[indexPath.row % 7] as Day?,
                 let dayName = day.dayName.rawValue as String?,
-                let image = day.meals[Int.random(in: 0..<3)].image,
+                let image = temporaryImageArray[indexPath.row % 7] as UIImage?,
                 let nutrients = day.nutrients else {
                 return UICollectionViewCell()
             }
